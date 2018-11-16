@@ -3,8 +3,9 @@
 #include <linux/module.h>
 #include <linux/io.h>
 #include <linux/gpio.h>
-#include <asm/uaccess.h>
-#include <mach/platform.h>
+#include <linux/uaccess.h>
+//#include <asm/uaccess.h>
+//#include <mach/platform.h>
 
 MODULE_LICENSE("GPL");
 

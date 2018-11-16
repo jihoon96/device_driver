@@ -2,12 +2,15 @@
 #include <linux/cdev.h>
 #include <linux/module.h>
 #include <linux/io.h>
-#include <asm/uaccess.h>
-#include <mach/platform.h>
+//#include <asm/uaccess.h>
+#include <linux/uaccess.h>
+//#include <mach/platform.h>
+
 
 MODULE_LICENSE("GPL");
 
 #define GPIO_SIZE		256
+#define GPIO_BASE		0x3f200000 // platform.h
 
 #define GPIO_IN(g)		(*(gpio+((g)/10)) &= ~(7<<(((g)%10)*3)))
 #define GPIO_OUT(g)		(*(gpio+((g)/10)) |= (1<<(((g)%10)*3)))
